@@ -17,11 +17,7 @@ const Home = () => {
     const fetchWorkouts = async () => {
       // const API_URL = process.env.API_URL || 'http://localhost:3000'
       try {
-        const response = await fetch(`${API_URL}/api/workouts`, {
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          },  
-        })
+        const response = await fetch(`${API_URL}/api/workouts`)
 
         const json = await response.json()
         if (response.ok) {
